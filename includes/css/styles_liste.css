@@ -1,0 +1,205 @@
+@import url('reset.css');
+@import url('common.css');
+
+button{
+	border: none;
+	cursor: pointer;
+	transition-duration: 0.3s;
+}
+
+main{
+	min-width: 320px;
+	height: 100vh;
+	width: 100vw;
+	display: grid;
+	grid-template-columns: 70px 1fr;
+}
+
+nav {
+	width: 70px;
+	max-height: 100vh;
+	background-color: lightgray;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	position: relative;
+	margin-bottom: 0;
+	padding-top: 20px;
+}
+
+nav a {
+	margin-bottom: 20px;
+}
+
+nav img{
+	width: 48px;
+	height: 48px;
+}
+
+section{
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	overflow-y: scroll;
+	align-items: center;
+	justify-content: flex-start;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.card{
+	position: relative;
+	min-width: 250px;
+	margin-left: 5px;
+	width: 80%;
+	min-height: 70px;
+	background-color: lightgray;
+	border-radius: 5px;
+	box-shadow: 2px 4px 4px #999999;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	padding: 5px;
+}
+
+.card .photo{
+	align-self: center;
+	width: 54px;
+	height: 54px;
+	border: solid 1px black;
+	border-radius: 50%;
+	background-color: #FFFFFF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 10px;
+}
+
+.card .photo img{
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	background-color: #FFFFFF;
+}
+
+.card .infos{
+	align-self: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 5px;
+}
+
+.card .infos .pater :first-child{
+	text-transform: uppercase;
+}
+
+.card .infos > span{
+	display: none;
+}
+
+.card button.star{
+	width: 1.6rem;
+	height: 1.6rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 50%;
+	box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.2);
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform: translate(0.8rem, -0.8rem);
+}
+
+.card button .starsailor{
+	fill: #FFFFFF;
+}
+
+.card button.starred .starsailor{
+	fill: #ffee00;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+	section{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+		overflow-y: scroll;
+		height: fit-content;
+		justify-items: center;
+		position: relative;
+		margin-right: 0;
+		max-height: 100vh;
+	}
+
+	.card .infos{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.card .infos .pater{
+		font-size: 1.2rem;
+	}
+
+	.card .infos .email{
+		display: block;
+	}
+}
+
+@media screen and (min-width: 1024px){
+	section{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 10px;
+		row-gap: 20px;
+		overflow-y: scroll;
+		height: fit-content;
+		justify-items: center;
+		position: relative;
+		margin-right: 0;
+		max-height: 100vh;
+	}
+	
+	.card{
+		display: flex;
+		flex-direction: column;
+	}
+
+
+	.card .photo{
+		width: 220px;
+		height: 220px;
+	}
+
+	.card .photo img{
+		width: 200px;
+		height: 200px;
+	}
+
+	.card .infos{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.card .infos .pater{
+		font-size: 1.8rem;
+		text-align: center;
+	}
+
+	.card .infos > span{
+		display: block;
+	}
+} 
+
+@media screen and (min-width: 1250px){
+	section{
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
