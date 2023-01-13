@@ -10,13 +10,13 @@
 <body>
 	<main>
 		<nav>
-			<a href="index.html" title="Rechercher un contact">
+			<a href="index.php" title="Rechercher un contact">
 				<img src="includes/images/user_search.png" alt="Recherche">
 			</a>
-			<a href="liste_contact.html" title="Liste des contacts">
+			<a href="liste_contact.php" title="Liste des contacts">
 				<img src="includes/images/users.png" alt="Lister">
 			</a>
-			<a href="frm_contact.html" title="Ajouter un contact">
+			<a href="frm_contact.php" title="Ajouter un contact">
 				<img src="includes/images/user_add.png" alt="Ajouter">
 			</a>
 		</nav>
